@@ -1,7 +1,8 @@
 
 This is a temperature conversion component using react. This is the same program as the one I created using vanilla javascript. I just wanted to show you how to create a component with radio input in react.
 
-![Screen Shot 2024-02-18 at 4 09 10 PM](https://github.com/JonathanRaposo/temperute-conversion-component-react/assets/67019470/32a94f1c-0edb-4ee4-9a65-a04124da03b2)
+
+<img width="695" alt="Screen Shot 2024-02-18 at 5 48 29 PM" src="https://github.com/JonathanRaposo/temperute-conversion-component-react/assets/67019470/25f2358e-58eb-4e56-825b-11235c89cbc8">
 
 
 
