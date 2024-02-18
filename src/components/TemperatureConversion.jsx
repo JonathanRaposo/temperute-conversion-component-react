@@ -13,6 +13,7 @@ const TemperatureConversion = () => {
 
         //  convert string to a numerical value
         const parsedDegree = Number(degree);
+
         let converted;
         switch (temperature) {
             case 'celsius':
@@ -24,9 +25,9 @@ const TemperatureConversion = () => {
                 converted = `${Math.round((degree * 9 / 5) + 32)}ºF`;
                 setResult(converted);
                 break;
+
             default:
                 converted = 'Select a unit';
-
                 setResult(converted);
         }
     }
@@ -67,8 +68,6 @@ const TemperatureConversion = () => {
             {result && <p className='result'>{result}</p>}
         </form>
     );
-
-
 
 }
 
