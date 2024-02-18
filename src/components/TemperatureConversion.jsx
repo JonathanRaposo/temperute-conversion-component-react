@@ -1,5 +1,9 @@
 import { useState } from 'react';
 
+const items = [
+    { value: 'celsius', label: 'Fahrenheit ➡️ Celsius' },
+    { value: 'fahrenheit', label: 'Celsius ➡️ Fahrenheit' }
+]
 
 const TemperatureConversion = () => {
     const [temperature, setTemperature] = useState('');
@@ -43,27 +47,19 @@ const TemperatureConversion = () => {
                 value={degree}
                 onChange={(e) => setDegree(e.target.value)}
             />
-            <div>
-                <input
-                    type="radio"
-                    name="temperature"
-                    value="celsius"
-                    checked={temperature === 'celsius'}
-                    onChange={(e) => setTemperature(e.target.value)}
-                />
-                <label>Fahrenheit ➡️ Celsius</label>
-            </div>
-
-            <div>
-                <input
-                    type="radio"
-                    name="temperature"
-                    value="fahrenheit"
-                    checked={temperature === 'fahrenheit'}
-                    onChange={(e) => setTemperature(e.target.value)}
-                />
-                <label>Celsius ➡️ Fahrenheit</label>
-            </div>
+            {items.map((item) => (
+                <div key={item.value}>
+                    <input
+                        type="radio"
+                        name="temperature"
+                        value={item.value}
+                        id={item.value}
+                        checked={temperature === item.value}
+                        onChange={(e) => setTemperature(e.target.value)}
+                    />
+                    <label htmlFor={item.value}>{item.label}</label>
+                </div>
+            ))}
             <button onClick={handleConversion}>Convert</button>
             {result && <p className='result'>{result}</p>}
         </form>
