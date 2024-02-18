@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin:0;
+    padding:0;
+}
+
+
+.TemperatureConversion {
+    width: 350px;
+    height: 350px;
+    margin: 100px auto;
+    box-shadow: 1px 2px 5px #9e9999;
+    padding: 6px;
+  
+    border-radius: 6px;
+}
+.TemperatureConversion h3{
+    text-align: center;
+    font-size: 1.2em;
+}
+#degree{
+  border: 1px solid #ccc;
+  outline: none;
+  width: 50px;
+  font-size: 1em;
+  font-weight: 500;
+  border-radius: 4px;
+}
+.degree-label{
+  margin: auto 10px auto 100px;
+}
+.TemperatureConversion div {
+    width: 200px;
+    margin:20px auto 20px 72px;
+    text-align: left;
+}
+
+
+button{
+    display: block;
+    width: 85px;
+    margin: 40px auto;
+    padding: 6px 10px;
+    font-size: 1em;
+    font-family: monospace, 'Lucida Grande';
+    font-weight: 500;
+    color: #fff;
+    border: none;
+    border-radius: 16px;
+    background-color:#a509a5 ;
+    transition: background-color .5s;
+
+    
+    
+}
+button:hover{
+    background-color:#dd1ddd ;
+}
+
+.result{
+  text-align: center;
+  font-size:1.5em;
+  font-weight: 600;
+
+}
