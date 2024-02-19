@@ -3,7 +3,7 @@ import { useState } from 'react';
 const items = [
     { value: 'celsius', label: 'Fahrenheit ➡️ Celsius' },
     { value: 'fahrenheit', label: 'Celsius ➡️ Fahrenheit' }
-]
+];
 
 const TemperatureConversion = () => {
     const [temperature, setTemperature] = useState('');
@@ -11,7 +11,7 @@ const TemperatureConversion = () => {
     const [result, setResult] = useState(undefined);
 
     const handleConversion = (e) => {
-        e.preventDefault()
+        e.preventDefault();
 
         if (!degree) return setResult('Enter degree');
 
