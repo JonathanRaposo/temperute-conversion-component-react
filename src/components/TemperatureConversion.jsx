@@ -1,14 +1,15 @@
 import { useState } from 'react';
 
-const items = [
-    { value: 'celsius', label: 'Fahrenheit ➡️ Celsius' },
-    { value: 'fahrenheit', label: 'Celsius ➡️ Fahrenheit' }
-];
-
 const TemperatureConversion = () => {
-    const [temperature, setTemperature] = useState('');
+    const [unit, setUnit] = useState('');
     const [degree, setDegree] = useState('');
     const [result, setResult] = useState(undefined);
+
+
+    const items = [
+        { value: 'celsius', label: 'Fahrenheit ➡️ Celsius' },
+        { value: 'fahrenheit', label: 'Celsius ➡️ Fahrenheit' }
+    ];
 
     const handleConversion = (e) => {
         e.preventDefault();
@@ -19,7 +20,7 @@ const TemperatureConversion = () => {
         const parsedDegree = Number(degree);
 
         let converted;
-        switch (temperature) {
+        switch (unit) {
             case 'celsius':
                 converted = `${Math.round((parsedDegree - 32) * 5 / 9)}ºC`;
                 setResult(converted);
@@ -51,11 +52,11 @@ const TemperatureConversion = () => {
                 <div key={item.value}>
                     <input
                         type="radio"
-                        name="temperature"
+                        name="unit"
                         value={item.value}
                         id={item.value}
-                        checked={temperature === item.value}
-                        onChange={(e) => setTemperature(e.target.value)}
+                        checked={unit === item.value}
+                        onChange={(e) => setUnit(e.target.value)}
                     />
                     <label htmlFor={item.value}>{item.label}</label>
                 </div>
