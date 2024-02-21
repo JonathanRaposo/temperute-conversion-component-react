@@ -5,7 +5,6 @@ const TemperatureConversion = () => {
     const [degree, setDegree] = useState('');
     const [result, setResult] = useState(undefined);
 
-
     const items = [
         { value: 'celsius', label: 'Fahrenheit ➡️ Celsius' },
         { value: 'fahrenheit', label: 'Celsius ➡️ Fahrenheit' }
