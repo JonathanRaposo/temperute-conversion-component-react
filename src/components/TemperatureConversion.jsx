@@ -19,21 +19,21 @@ const TemperatureConversion = () => {
         //  convert string to a numerical value
         const parsedDegree = Number(degree);
 
-        let converted;
+        let convertedTemp;
         switch (unit) {
             case 'celsius':
-                converted = `${Math.round((parsedDegree - 32) * 5 / 9)}ºC`;
-                setResult(converted);
+                convertedTemp = `${Math.round((parsedDegree - 32) * 5 / 9)}ºC`;
+                setResult(convertedTemp);
                 break;
 
             case 'fahrenheit':
-                converted = `${Math.round((degree * 9 / 5) + 32)}ºF`;
-                setResult(converted);
+                convertedTemp = `${Math.round((degree * 9 / 5) + 32)}ºF`;
+                setResult(convertedTemp);
                 break;
 
             default:
-                converted = 'Select a unit';
-                setResult(converted);
+                convertedTemp = 'Select a unit';
+                setResult(convertedTemp);
         }
     }
 
