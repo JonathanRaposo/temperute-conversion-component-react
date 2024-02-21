@@ -32,8 +32,7 @@ const TemperatureConversion = () => {
                 break;
 
             default:
-                convertedTemp = 'Select a unit';
-                setResult(convertedTemp);
+                setResult('Select a unit');
         }
     }
 
